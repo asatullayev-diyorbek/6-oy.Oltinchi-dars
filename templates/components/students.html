@@ -1,0 +1,35 @@
+
+
+<section id="pricing" class="pricing section">
+
+      <div class="container">
+
+        <div class="row gy-3">
+
+            {% for group_student in group_students %}
+            	<div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-item featured">
+                      <h3>{{ group_student.student.first_name }} {{ group_student.student.last_name }}</h3>
+                      <ul>
+                        <li>Guruhi: {{ group_student.group.name }}</li>
+                        <li>Manzili: {{ group_student.student.address }}</li>
+                        <li>Telefon raqami: {{ group_student.student.phone }}</li>
+                        <li>Boshlanish vaqti: {{ group_student.reg_date }}</li>
+                        <li>Tugash vaqti: {{ group_student.end_date }}</li>
+                        <li>Status: {% if group_student.student_status == 1 %}Faol{% else %}Nofaol{% endif %}</li>
+                      </ul>
+                      <div class="btn-wrap">
+                        <a href="#" class="btn-buy">Batafsil</a>
+                      </div>
+                    </div>
+                </div><!-- End Pricing Item -->
+            {% endfor %}
+
+
+
+
+        </div>
+
+      </div>
+
+</section>

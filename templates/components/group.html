@@ -1,0 +1,45 @@
+{% load static %}
+
+
+<section id="courses" class="courses section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Guruhlar</h2>
+        <p>Bizning Guruhlar</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          {% for group in groups %}
+          	<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="course-item">
+                  <img style="padding: 20px;" width="360px" height="260px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0hOahC3L5FIuymw9EA3Zx7YaEe0J-zVxpgQ&s"  alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="category">{{ group.name }} ({{ group.course.name }})</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="price">Start: {{ group.start_date }}</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="price">End: {{ group.end_date }}</p>
+                    </div>
+
+
+
+                    <h3><a href="#">Batafsil</a></h3>
+
+                  </div>
+                </div>
+              </div> <!-- End Course Item-->
+
+          {% endfor %}
+
+      </div>
+
+      </div>
+
+    </section>

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block hero %}
+    <!-- Hero Section -->
+      {% include 'components/hero_index.html' %}
+    <!-- /Hero Section -->
+{% endblock %}
+
+
+{% block content %}
+    <!-- About Section -->
+      {% include 'components/about.html' %}
+    <!-- /About Section -->
+
+    <!-- Counts Section -->
+      {% include 'components/count.html' %}
+      <!-- /Counts Section -->
+
+    <!-- Why Us Section -->
+    {% include 'components/why_us.html' %}
+      <!-- /Why Us Section -->
+
+    <!-- Features Section -->
+    {% include 'components/features.html' %}
+      <!-- /Features Section -->
+
+    <!-- Courses Section -->
+    {% include 'components/courses.html' %}
+      <!-- /Courses Section -->
+
+    <!-- Trainers Index Section -->
+    {% include 'components/group.html' %}
+      <!-- /Trainers Index Section -->
+{% endblock %}
